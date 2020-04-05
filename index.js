@@ -11,6 +11,10 @@ DBconnect()
 
 app.use("/",router)
 
+app.use("/",(req,res)=>{
+    res.send("The page you are looking for does not exist")
+})
+
 app.listen(PORT,()=>{
     console.log(`Listening to port : ${PORT}`)
 })
